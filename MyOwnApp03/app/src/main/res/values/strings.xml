@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyOwnApp03</string>
+    <string name="enterSongName">Zadejte název písničky</string>
+    <string name="enterArtist">Zadejte Interpreta</string>
+    <string name="enterLyrics">Zadejte oblíbenou část textu písničky</string>
+    <string name="enterLenght">Délka písničky (min:sec)</string>
+    <string name="enterGenre">Žánr písničky</string>
+    <string name="btnSubmit">Odeslat</string>
+    <string name="tvOutcome">Zde uvidíte výsledek</string>
+</resources>
