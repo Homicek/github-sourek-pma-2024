@@ -1,16 +1,15 @@
 package com.example.myapplication002
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
+//import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.annotation.SuppressLint
+//import androidx.core.view.ViewCompat
+//import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -31,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         val etTown = findViewById<EditText>(R.id.etTown)
         val etAge = findViewById<EditText>(R.id.etAge)
         val twInformation = findViewById<TextView>(R.id.twInformation)
-        val btnSend = findViewById<EditText>(R.id.btnSend)
-        val btnDelete = findViewById<EditText>(R.id.btnVymazat)
+        val btnSend = findViewById<Button>(R.id.btnSend)
+        val btnDelete = findViewById<Button>(R.id.btnVymazat)
 
         //Nastavení pro tlačítko odeslat
         btnSend.setOnClickListener {

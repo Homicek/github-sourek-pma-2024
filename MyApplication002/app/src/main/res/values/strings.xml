@@ -6,4 +6,5 @@
     <string name="hint_name">Zadejte jméno</string>
     <string name="hint_town">Zadejte město</string>
     <string name="hint_surname">Zadejte příjmení</string>
+    <string name="txtInformace">Informace</string>
 </resources>
