@@ -1,19 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNadpis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:text="Pick configuration of your new iPhone 16 pro"
+        android:layout_gravity="center"/>
+
+    <RadioGroup
+        android:id="@+id/rgiPhones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/iphoneWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/iphoneBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Black"/>
+
+        <RadioButton
+            android:id="@+id/iphoneCopper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copper"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/gb128"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128GB"
+        android:layout_gravity="center"/>
+
+      <CheckBox
+        android:id="@+id/gb256"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="256GB"
+          android:layout_gravity="center"/>
+
+      <CheckBox
+        android:id="@+id/gb512"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="512GB"
+          android:layout_gravity="center"/>
+
+<Button
+    android:id="@+id/submit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Confirm order"
+    android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Order sumary:"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iphoneWhiteImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/iphonewhite"
+        android:layout_marginTop="50dp"/>
+
+        <ImageView
+        android:id="@+id/iphoneBlackImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/iphoneblack"
+        android:layout_marginTop="50dp"/>
+
+        <ImageView
+        android:id="@+id/iphoneCopperImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/iphonecopper"
+        android:layout_marginTop="50dp"/>
+
+
+</LinearLayout>
