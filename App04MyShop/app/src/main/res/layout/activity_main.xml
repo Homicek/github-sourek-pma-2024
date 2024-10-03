@@ -13,8 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:text="Pick configuration of your new iPhone 16 pro"
-        android:layout_gravity="center"/>
+        android:text="Pick configuration of iPhone 16 pro"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:id="@+id/rgiPhones"
@@ -70,7 +74,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Confirm order"
-    android:layout_gravity="center"/>
+    android:layout_gravity="center"
+    android:backgroundTint="@color/myLightOrange"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,9 +89,9 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/iphonewhite"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="20dp"/>
 
-        <ImageView
+      <!--  <ImageView
         android:id="@+id/iphoneBlackImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -99,6 +104,6 @@
         android:layout_height="300dp"
         android:src="@drawable/iphonecopper"
         android:layout_marginTop="50dp"/>
-
+    -->
 
 </LinearLayout>
