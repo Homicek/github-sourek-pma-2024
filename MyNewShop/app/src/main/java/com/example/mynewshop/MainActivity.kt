@@ -1,6 +1,7 @@
 package com.example.mynewshop
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RadioButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,26 +22,28 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //title = "Objednávka kola"
+        title = "iPhone 16 pro new order"
+
 
         binding.submit.setOnClickListener {
-
             // načtení ID vybraného radioButtonu z radioGroup
             val rgiPhones = binding.rgiPhones.checkedRadioButtonId
 
             val iPhoneColor = findViewById<RadioButton>(rgiPhones)
 
-            val white = binding.iphoneWhite.isChecked
-            val black = binding.iphoneBlack.isChecked
-            val copper = binding.iphoneCopper.isChecked
+            val leatherCase = binding.leatherCase.isChecked
+            val headphones = binding.headphones.isChecked
+            val protectiveGlass = binding.protectiveGlass.isChecked
 
-            /*val objednavkaText = "Souhrn objednávky: " +
-                    "${kolo.text}" +
-                    (if(vidlice) "; lepší vidlice" else "") +
-                    (if(sedlo) "; lepší sedlo" else "") +
-                    (if(riditka) "; vytuněná karbonová řidítka" else "")
 
-            binding.tvObjednavka.text = objednavkaText*/
+
+            val objednavkaText = "Order summary:\n"+
+                    "Color: ${iPhoneColor.text}" +
+                    (if(leatherCase) ", additional protective leather case " else "") +
+                    (if(headphones) ", additional Airpods pro 2" else "") +
+                    (if(protectiveGlass) ", apply a protective gorilla glass" else "") + "."
+
+            binding.summaryText.text = objednavkaText
 
         }
 
@@ -56,6 +59,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.iphoneCopper.setOnClickListener {
             binding.iphoneImage.setImageResource(R.drawable.iphonecopper)
+        }
+
+        val btnReset = findViewById<Button>(R.id.reset)
+
+        btnReset.setOnClickListener {
+            binding.headphones.isChecked = false
+            binding.leatherCase.isChecked = false
+            binding.protectiveGlass.isChecked = false
+            binding.summaryText.text="Order summary:"
+
         }
 
     }
