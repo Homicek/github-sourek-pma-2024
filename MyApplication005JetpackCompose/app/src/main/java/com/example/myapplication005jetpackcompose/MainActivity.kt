@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -65,15 +66,18 @@ fun ComposeExample(){
     var age by remember { mutableStateOf("") }
     var place by remember { mutableStateOf("") }
     var resultText by remember { mutableStateOf("") }
+    var PSC by remember { mutableStateOf("") }
+    var pet by remember { mutableStateOf("") }
 
     //Přidáme Scaffold, abychom mohli přidat TopAppBar
     Scaffold(
         topBar = {
-            TopAppBar(
+            CenterAlignedTopAppBar(
                 title = {
                     Text(
                         "Moje Aplikace",
                         color = Color.White
+
                     )
                 }, // Nastaví barvu textu na bílou
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
@@ -124,16 +128,39 @@ fun ComposeExample(){
                 modifier = Modifier.fillMaxWidth()
             )
 
+            OutlinedTextField(
+                value = PSC,
+                onValueChange = { PSC = it },
+                label = { Text("Poštovní směrovací číslo") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            OutlinedTextField(
+                value = pet,
+                onValueChange = {
+                    // Omezíme vstup na číslice a kontrolujeme, že číslo není větší než 150
+                    if (it.all { char -> char.isDigit() } && it.toIntOrNull()?.let { it <= 10 } == true) {
+                        pet = it
+                    }
+                },
+                label = { Text("Počet domácích mazlíčků (hodnota menší než 10)") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ){
                 Button(
                     onClick = {
-                        resultText = "Jmenuji se $name $surname. Je mi $age let a moje bydliště je $place."
+                        resultText = "Jmenuji se $name $surname. Je mi $age let a moje bydliště je $place, $PSC, a mám $pet domácích mazlíčků"
                     },
-                    modifier = Modifier.weight(1f)
-                ) {
+                    modifier = Modifier.weight(1f),
+                            colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF4CAF50),  // Hexadecimální barva pro pozadí tlačítka
+                    contentColor = Color.White  // Barva textu na tlačítku
+                            )) {
                     Text("Odeslat")
                 }
 
