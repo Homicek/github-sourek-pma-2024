@@ -25,6 +25,7 @@ import java.io.FileWriter
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var database: HabitDatabase
