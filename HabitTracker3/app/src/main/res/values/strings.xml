@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HabitTracker</string>
+    <string-array name="priority_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+        <string-array name="habit_categories">
+            <item>Home</item>
+            <item>Work</item>
+            <item>Other</item>
+        </string-array>
+</resources>

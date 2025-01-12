@@ -1,0 +1,48 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tlačítko pro přidání nového návyku -->
+    <Button
+        android:id="@+id/btn_open_add_habit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Habit" />
+    <Button
+        android:id="@+id/btn_export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export Habits" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Spinner
+            android:id="@+id/sp_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/filter_options"
+            android:layout_marginEnd="8dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp" />
+
+
+    <!-- RecyclerView pro zobrazení seznamu návyků -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_habits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

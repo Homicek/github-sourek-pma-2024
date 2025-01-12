@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground"
+    android:layout_marginBottom="8dp">
+
+    <!-- Název návyku -->
+    <TextView
+        android:id="@+id/tv_habit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Habit Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Kategorie návyku -->
+    <TextView
+        android:id="@+id/tv_habit_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- Priorita návyku -->
+    <TextView
+        android:id="@+id/tv_habit_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tv_habit_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date and Time: N/A"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/black" />
+
+    <CheckBox
+        android:id="@+id/cb_habit_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_marginTop="8dp" />
+
+
+
+
+</LinearLayout>
